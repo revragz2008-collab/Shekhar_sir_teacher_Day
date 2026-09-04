@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shekhar Sir - Celebration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="teacher-page theme-shekhar">
+
+    <audio id="teacher-song" autoplay loop>
+        <source src="teacher-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-toggle" class="music-btn">🔊</button>
+
+    <div class="bg-decor">
+        <span class="floating-emoji" style="top: 8%; left: 8%; font-size: 2.8rem;">💻</span>
+        <span class="floating-emoji" style="top: 40%; right: 12%; font-size: 3rem;">⚙️</span>
+        <span class="floating-emoji" style="top: 70%; left: 15%; font-size: 2.8rem;">🚀</span>
+    </div>
+
+    <div class="home-container" style="padding-top: 30px;">
+        <div class="t-container">
+            <div class="t-header">
+                <h4>✦ TEACHERS' DAY 2026 ✦</h4>
+            </div>
+            
+            <div class="profile-wrapper">
+                <img src="images/shekhar.jpg" class="teacher-img" alt="Shekhar Sir" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="img-fallback" style="display:none;">SS</div>
+            </div>
+
+            <div class="t-titles" style="margin-top: 15px;">
+                <h1>Shekhar Sir</h1>
+                <p class="subject">Informatics Practices</p>
+                <p class="p-title">💻 Making Code Feel Simple</p>
+            </div>
+
+            <div class="message-card">
+                <h5>SYSTEM STATUS: LEGENDARY MENTOR</h5>
+                <div class="message-body">
+                    <p>Dear Sir,</p><br>
+                    <p>Thank you for making subjects like Python and SQL feel completely approachable. Your ability to break down complex code into simple steps is amazing.</p><br>
+                    <p>Your humility and patient support make you an exceptional teacher and mentor to all of us.</p>
+                    <div class="quote-highlight">"Good teachers don't just teach code — they make students confident."</div>
+                    <div class="small-highlight">⌨️ Python • SQL • Patience</div>
+                </div>
+                <div class="t-footer">
+                    <p>print("Thank you for being you.")</p>
+                    <p>With gratitude & respect ❤️</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="index.html" style="color: #a7f3d0; font-size: 0.9rem; text-decoration: underline;">← Back to Home</a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Army Public School Miran Sahib</p>
+            <p>Made with ❤️ by Raghav</p>
+        </footer>
+    </div>
+
+    <script>
+        const song = document.getElementById("teacher-song");
+        const toggleBtn = document.getElementById("music-toggle");
+        let playing = true;
+        song.volume = 0.7;
+
+        toggleBtn.addEventListener("click", () => {
+            if (playing) {
+                song.pause();
+                toggleBtn.classList.add("muted");
+                toggleBtn.innerText = "🔇";
+                playing = false;
+            } else {
+                song.play();
+                toggleBtn.classList.remove("muted");
+                toggleBtn.innerText = "🔊";
+                playing = true;
+            }
+        });
+    </script>
+</body>
+</html>
